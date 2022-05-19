@@ -6,6 +6,7 @@ public class Ejercicio2 {
 		media();
 		evenOdd();
 		category();
+		carFeatures();
 	}
 
 	static void media() {
@@ -31,6 +32,21 @@ public class Ejercicio2 {
 			System.out.println("Padre");
 		} else if (cat == "c") {
 			System.out.println("Abuelo");
+		} else {
+			System.out.println("Error");
+		}
+	}
+
+	static void carFeatures() {
+
+		String car = "c";
+
+		if (car == "a") {
+			System.out.println("4 ruedas y volante");
+		} else if (car == "b") {
+			System.out.println("4 ruedas, volante y aire");
+		} else if (car == "c") {
+			System.out.println("4 ruedas, volante, aire y airbag");
 		} else {
 			System.out.println("Error");
 		}
