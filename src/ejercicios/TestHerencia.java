@@ -18,8 +18,18 @@ public class TestHerencia {
 		g.department = "Ventas";
 		g.name = "Cor";
 		g.salary = 8000;
-		
+
 		System.out.println(g.getDetails());
+		
+		System.out.println();
+		
+		// Instancia a traves de polimorfismo
+		Empleado s = new Secretaria();
+		if (s instanceof Secretaria) {
+			Secretaria s1 = (Secretaria) s;
+			s1.antiguedad = 22;
+			System.out.println(s1.antiguedad = 22);
+		}
 	}
 
 }
