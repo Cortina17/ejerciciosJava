@@ -18,10 +18,11 @@ public class Ejercicio3 {
 
 	static void netSalary() {
 
-		byte ant = 3;
-		char cat = 'C';
-		double salary = 1000;
+		byte ant = 2;
+		char cat = 'B';
+		double salary = 10000;
 		double totalSalary = 0;
+		double totalBonus = 0;
 
 		if (ant > 1 && ant <= 5) {
 			totalSalary = salary * 1.05;
@@ -35,14 +36,14 @@ public class Ejercicio3 {
 
 		switch (cat) {
 		case 'A':
-			totalSalary = totalSalary + 1000;
+			totalBonus = totalSalary + 1000;
 		case 'B':
-			totalSalary = totalSalary + 2000;
+			totalBonus = totalSalary + 2000;
 		case 'C':
-			totalSalary = totalSalary + 3000;
+			totalBonus = totalSalary + 3000;
 		}
 
-		System.out.println("Total salary is: " + totalSalary + " euros");
+		System.out.println("Total salary is: " + totalBonus + " euros.");
 	}
 
 }
