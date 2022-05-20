@@ -1,11 +1,13 @@
 package ejercicios;
 
+import java.util.Random;
+
 public class Ejercicio3 {
 
 	public static void main(String[] args) {
 		table();
 		netSalary();
-
+		salarioNetoRandom();
 	}
 
 	static void table() {
@@ -44,6 +46,51 @@ public class Ejercicio3 {
 		}
 
 		System.out.println("Total salary is: " + totalBonus + " euros.");
+	}
+
+	static void salarioNetoRandom() {
+		Random random = new Random();
+
+		for (int i = 0; i < 10; i++) {
+			char randomCharacter = ' ';
+			int antiguedad = 0;
+			int sueldo = 0;
+			while (randomCharacter != 'a' && randomCharacter != 'b' && randomCharacter != 'c') {
+				randomCharacter = (char) (random.nextInt(26) + 'a');
+			}
+			sueldo = random.nextInt(50000) + 10000;
+			antiguedad = random.nextInt(45) + 1;
+			System.out.println("Categoria: " + randomCharacter + " Sueldo: " + sueldo + " Antiguedad: " + antiguedad);
+			switch (randomCharacter) {
+			case 'a':
+				if (antiguedad < 6) {
+					System.out.println("Sueldo neto = " + (sueldo * 1.05 + 1000));
+				} else if (antiguedad < 11) {
+					System.out.println("Sueldo neto = " + (sueldo * 1.10 + 1000));
+				} else {
+					System.out.println("Sueldo neto = " + (sueldo * 1.30 + 1000));
+				}
+				break;
+			case 'b':
+				if (antiguedad < 6) {
+					System.out.println("Sueldo neto = " + (sueldo * 1.05 + 2000));
+				} else if (antiguedad < 11) {
+					System.out.println("Sueldo neto = " + (sueldo * 1.10 + 2000));
+				} else {
+					System.out.println("Sueldo neto = " + (sueldo * 1.30 + 2000));
+				}
+				break;
+			case 'c':
+				if (antiguedad < 6) {
+					System.out.println("Sueldo neto = " + (sueldo * 1.05 + 3000));
+				} else if (antiguedad < 11) {
+					System.out.println("Sueldo neto = " + (sueldo * 1.10 + 3000));
+				} else {
+					System.out.println("Sueldo neto = " + (sueldo * 1.30 + 3000));
+				}
+				break;
+			}
+		}
 	}
 
 }
