@@ -82,7 +82,7 @@ public class Ejercicio3 {
 				break;
 			case 'c':
 				if (antiguedad < 6) {
-					System.out.println("Sueldo neto = " + (sueldo * 1.05 + 3000));
+					System.out.println("Sueldaso neto = " + (sueldo * 1.05 + 3000));
 				} else if (antiguedad < 11) {
 					System.out.println("Sueldo neto = " + (sueldo * 1.10 + 3000));
 				} else {
