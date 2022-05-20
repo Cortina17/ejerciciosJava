@@ -12,4 +12,6 @@ public class ServerTimedOutException extends Exception {
 	protected int getPort() {
 		return port;
 	}
+	
+	
 }
